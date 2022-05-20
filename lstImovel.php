@@ -12,11 +12,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <title>Listar Imovéis</title>
 </head>
-<body>
-        
-        <table>
+<body>  
+        <br>
+        <h1 class="container">Listar Imóveis
+        <a class="btn-floating btn-large waves-effect waves-light black" onclick="JavaScript:location.href='frmInsImovel.php'"><i class="material-icons">add</i></a>
+        </h1>
+        <br>
+        <table class="container striped brown lighten-4">
             <tr>
                 <th>ID</th>
                 <th>RUA</th>
