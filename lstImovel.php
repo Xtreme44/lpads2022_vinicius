@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <title>Listar Imovéis</title>
 </head>
@@ -30,6 +31,7 @@
                 <th>BAIRRO</th>
                 <th>CIDADE</th>
                 <th>STATUS</th>
+                <th>FUNÇÕES</th>
             </tr>
             <?php
                 foreach($lstImovel as $imovel) {
@@ -40,6 +42,14 @@
                 <td><?php echo $imovel['bairro']?></td>
                 <td><?php echo $imovel['cidade']?></td>
                 <td><?php echo $imovel['status']?></td>
+                <td><a class="btn-floating btn-medium waves-effect waves-light black" 
+                    onclick="JavaScript:location.href='frmEdtImovel.php?id='+
+                    <?php echo $imovel['id'];?> ">
+                    <i class="material-icons">edit</i></a>
+                <a class="btn-floating btn-medium waves-effect waves-light black" 
+                    onclick="JavaScript:location.href='frmRemImovel.php?id='+
+                    <?php echo $imovel['id'];?> ">
+                    <i class="material-icons">delete</i></a></td>
             </tr>
             <?php
                 }
